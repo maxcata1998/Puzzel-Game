@@ -1,0 +1,7 @@
+
+First of all, design the splash screen and use turtle to draw the interface frame. 
+
+Second, design function to open the file to get the relevant puzzle information like size and number, store the index and address of picture as a dictionary, and get the address of the thumbnail. In Mario's case, looping from original position to generate a list of 16 pairs of coordinates. Each pair of coordinates is also a list, and it will be used as the center of every puzzle picture. To achieve the unordered effect, I create a random list composed of 1~16, so the images can be placed in a random order. After pasting the puzzle pictures, a list containing 16 groups of coordinates and image indexes can be generated. This list is very important.
+To realize the puzzle_wrapping function, the mouse click position is obtained by clicking on the screen using the ".onscreenclick". function. 
+First, determine which picture the coordinates of the mouse click belong to, using the range of center coordinates of every picture. If true, determine whether the center coordinate is around the blank picture. If yes, paste the blank puzzle to center coordinate of clicked picture and paste the clicked picture to previous position of blank puzzle. Note that the "important" list that was originally generated also needs to be updated. Also,  the number of steps increased by one for each move, and it should be recorded. 
+Click Reset to display the complete puzzle picture automatically, click Load to pop up a text box for user input, click Quit to quit the game.
